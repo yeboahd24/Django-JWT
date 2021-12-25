@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+    <main>
+        <class="form">
+            <div class="title">
+                <h1 id="title">Signup Form</h1>
+                <p id="description">Thank you for working with our platform</p>
+            </div>
+            <form id="survey-form" method="POST">
+                {% csrf_token %}
+
+                <label for="name" id="name-label" class="uno">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" requiered name="full_name">
+
+
+                <label for="email" id="email-label" class="uno">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" requiered name="email">
+
+                <label for="name" id="number-label" class="uno">Password</label>
+                <input type="password" id="name" placeholder="Enter your password" name="password">
+
+                <label for="name" id="number-label" class="uno">Confirm Password</label>
+                <input type="password" id="name" placeholder="password confirm" name="password2">
+
+                <!-- <label for="dropdown" id="dropdown-label" class="uno">Choose your currency option</label>
+
+                <select id="dropdown" name="currency">
+                    <option disable selected value>Select your currency type</option>
+                    <option value="NGN">NGN</option>
+                    <option value="GHS">GHS</option>
+
+                </select> -->
+
+
+
+                <button type="submit" id="submit" class="submit uno">Send your application</button>
+
+            </form>
+            </div>
+    </main>
+</body>
+
+</html>

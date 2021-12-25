@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+    <main>
+        <class="form">
+            <div class="title">
+                <h1 id="title">Payment Aggregators</h1>
+                <p id="description">Thank you for working with our platform</p>
+            </div>
+            <form id="survey-form" method="post">
+                {% csrf_token %}
+
+                <select id="dropdown" name="option">
+                    <option disable selected value>Select your payment platform type</option>
+                    <option value="flutterwave">Flutterwave</option>
+                    <option value="paystact">Paystack</option>
+
+                </select>
+
+
+
+                <button type="submit" id="submit" class="submit uno">Submit</button>
+
+            </form>
+            </div>
+    </main>
+</body>
+
+</html>
