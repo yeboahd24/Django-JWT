@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Dec  6 11:14:00 2019
 
-@author: sambhav
+@author: Dominic
 """
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import update_last_login
